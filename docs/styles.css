@@ -1,0 +1,557 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #350C40;
+  }
+
+/* Grid Container Layout */
+.main-container {
+  display: grid;
+  grid-template-areas:
+      "header main"
+      "footer footer";
+  grid-template-rows: 1fr auto; /* Main content and footer */
+  grid-template-columns: 60px 1fr; /* Adjust for the fixed width of the header */
+  height: 100vh;
+}
+
+/* Define a fixed width for the header */
+.header {
+  grid-area: header;
+  position: fixed; /* Fix the header to the left side of the viewport */
+  top: 0;
+  left: 0;
+  width: 60px; /* Set a specific width for the header */
+  height: 100vh; /* Full viewport height */
+  background-color: #350C40;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure header stays above other content */
+  overflow-y: auto; /* Allow the header content to scroll within its fixed size */
+}
+
+/* Ensuring header contents are aligned properly */
+.header-logo,
+.header-search,
+.header-dropdown {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+/* Main Content Styles */
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+  }
+
+.main-header {
+    position: relative;
+    height: 150px; 
+    overflow: hidden; /* Ensure the content doesn't overflow the section */
+  }
+  
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust height as needed */
+    background-image: url('src/banner2.jpg'); /* Path to your image */
+    background-size: cover; /* Ensure the background image covers the div */
+    background-position: left; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+    z-index: -1; /* Place the banner behind the content */
+  }  
+
+.header-content {
+    position: relative; /* Ensure the content is on top of the banner */
+    padding: 20px; /* Adjust padding as needed */
+    color: #ffffff; /* Adjust text color for contrast */
+}
+
+.content-and-sidebar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.content {
+    flex: 2; /* Makes the content larger */
+    background-color:#350C40;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Home Card Container Styles */
+.home-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adds both row and column gaps */
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for the container */
+    margin: 0 auto; /* Center the container */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.home-grid-col3 {
+    display: grid;
+    grid-template-rows: repeat(3, auto); /* Ensure 3 rows with automatic height */
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.home-link__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensures button fills its grid cell */
+    padding: 10px;
+    background-color: #4A1259;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.home-link__button a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none; /* Removes the underline */
+  color: white; /* Sets the text color to white */
+}
+
+
+/* Home Grid Styles */
+.home-content-overview {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Main content takes 2/3 of the width, side column takes 1/3 */
+    grid-template-rows: auto auto; /* Two rows: one for the top content, one for the bottom content */
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+.overview-title {
+  color: #ffffff;
+}
+
+/* Misc Styles */
+.home-card {
+    padding: 1rem;
+    background-color: #4A1259;
+    border-radius: 10px;
+    color: #ffffff;
+  }
+
+.home-card--col4 {
+    grid-column: 1; /* First column */
+    grid-row: 1 / span 2; /* Spans two rows */
+  }
+  
+.home-card--col2 {
+    grid-column: 2; /* Second column */
+    grid-row: 1 / span 2; /* Spans two rows */
+  }
+  
+.home-card--rowspan {
+    grid-row: span 2; /* Ensures Card 2 spans both rows */
+  }
+  
+.home-card--row1 {
+    grid-row: 1; /* First row */
+  }
+  
+.home-card--row2 {
+    grid-row: 2; /* Second row */
+  }
+  
+.home-card-title-large {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+/* Info Box Styles */
+.infobox {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+.infobox-header {
+    font-weight: bold;
+  }
+  
+.infobox-data {
+    text-align: right;
+  }
+  
+.infobox td {
+    table-layout: fixed;
+    max-width: 300px; /* Define a max-width to ensure the content doesn't overflow */
+    word-wrap: break-word; /* Break long words to keep them within their container */
+  }
+  
+  /* List Styles */
+ul {
+    padding-left: 20px; /* Adjust padding to prevent overflow */
+  }
+  
+li {
+    max-width: 100%; /* Ensure each list item stays within its container */
+    line-height: 1.5; /* Improve readability */
+  }
+  
+  /* Reasons To Pick Styles */
+.ReasonsToPick-header {
+    font-weight: bold;
+    text-align: center;
+    
+  }
+  
+.ReasonsToPick-summary {
+    text-align: center;
+    font-size: 1.1em;
+    padding-bottom: 10px;
+  }
+  
+  /* Tooltip Styles */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+.tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: #333;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Adjust position */
+    left: 50%;
+    margin-left: -110px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    justify-content: center; /* Centers the gallery */
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+  }
+  
+.gallerybox_ {
+  text-align: center;
+  max-width: 150px; /* Adjust this value for desired size */
+  margin: 0 1rem; /* Adds some spacing between the boxes */
+}
+
+.gallerybox {
+    text-align: center;
+    width: 100%; /* Ensures it fills the container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 300px; /* Set a specific max width if needed */
+    margin: 0 1rem; /* Adds some spacing between the boxes */
+  }
+  
+.thumb {
+    width: 100%;
+  }
+  
+.thumb img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+.gallerytext {
+    margin-top: 0.5rem;
+    font-size: 0.9rem; /* Adjust for smaller text if needed */
+  }
+
+/**/
+.attack-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #4A1259;
+  padding: 20px 0; /* Padding only on top and bottom */
+  margin: 20px 0;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 10px 0 15px rgba(0, 0, 0, 0.3); /* Shadow on the right */
+}
+
+.attack-gallery {
+  flex: 0 0 20%; /* Fixed width of 60% */
+}
+
+.tabber__section {
+  margin-top: 20px;
+}
+
+.tabber__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+  height: 52px; /* Set a consistent height */
+  box-sizing: border-box; /* Ensures padding is included in height */
+}
+
+.tabber__tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: -5px; /* Align with the table */
+}
+
+.tabber__tab {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Remove the underline from links */
+.tabber__tabs a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Set default text color */
+}
+
+/* Change active tab color */
+.tabber__tabs a[aria-selected="true"] {
+  color: #1ba6ff; /* Set color of the active tab */
+}
+
+/* Optional: Change inactive tab color */
+.tabber__tabs a[aria-selected="false"] {
+  color: white; /* Set color for inactive tabs */
+}
+
+.tabber__panel {
+  display: none;
+}
+
+.tabber__panel[aria-hidden="false"] {
+  display: block;
+}
+
+.attack-info {
+  max-width: 100%; /* Prevents it from exceeding the parent's width */
+  overflow: hidden; /* Hides overflowing content */
+  box-sizing: border-box; /* Includes padding and border in width */
+}
+
+.moveTable {
+  width: 100%;
+  border-collapse: collapse; /* Eliminate border gaps */
+}
+
+.moveTable th {
+  border-bottom: 2px solid #ddd;
+  padding: 0; /* Remove default padding */
+  height: 50px; /* Set the height */
+  text-align: center;
+  line-height: 50px; /* Vertically center the text */
+  box-sizing: border-box; /* Ensure padding and borders are included */
+}
+
+.moveTable td {
+  padding: 8px;
+  text-align: center;
+}
+
+.moveTable tbody {
+  background-color: #350C40; /* Set background color */
+}
+
+.row_down_tr {
+  background-color: #3a1e42; /* Set background color */
+}
+
+.attack-info-body {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.attack-info-body p, 
+.attack-info-body li {
+  font-size: 1.2em; /* Increase font size */
+}
+
+.anid_list {
+  font-size: 0.8em; /* Increase font size */
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.divisor {
+  border-bottom: 2px solid #ddd;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #350C40;
+  width: 200px; /* Adjust the width of the sidebar */
+  font-size: 1rem; /* Base font size for the sidebar */
+  padding: 10px;
+}
+
+/* Level 1 - Base Styles */
+.sidebar-level-1 {
+  font-size: 0.9rem; /* Smaller font size for level 1 */
+  padding-left: 10px; /* Indentation for level 1 */
+}
+
+/* Level 2 - Sub-section Styles */
+.sidebar-level-2 {
+  font-size: 0.85rem; /* Smaller font size for level 2 */
+  padding-left: 20px; /* Additional indentation for level 2 */
+}
+
+/* Level 3 - Deepest level of the sidebar */
+.sidebar-level-3 {
+  font-size: 0.8rem; /* Smallest font size for level 3 */
+  padding-left: 30px; /* Additional indentation for level 3 */
+}
+
+/* Sidebar Links */
+.sidebar-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar Link Items */
+.sidebar-links li {
+  margin-bottom: 0.6rem; /* Adjusted margin between links */
+}
+
+/* Sidebar Link Anchors */
+.sidebar-links a {
+  text-decoration: none;
+  color: #b8b8b8;
+  font-size: inherit; /* Ensure the text size follows the current level */
+}
+
+.sidebar-links a:hover {
+  color: #811f9c; /* Change color on hover */
+}
+
+
+/* Footer Styles */
+.footer {
+    grid-area: footer;
+    background-color: #4A1259;
+    color: white;
+    padding: 10px;
+    padding-bottom: 40px;
+    text-align: left;
+    align-self: start; /* Ensure the footer hugs its content */
+  }
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#wordmark {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+#footer-description {
+    font-size: 0.875rem; /* Smaller size for quotation */
+    color: #bbb; /* Lighter color */
+    max-width: 800px;
+    text-align: left;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: left;
+    padding-top: 10px;
+}
+
+#footer-tagline {
+    font-size: 0.875rem;
+    color: #ccc;
+}
+
+.mw-headline {
+  font-size: 1.25em; /* Adjust the size as necessary */
+}
+
+.section-title {
+  font-size: 2em; /* Adjust the size as necessary */
+  color: white; /* Sets the text color to white */
+  margin-top: 20px; /* Adds space above */
+  margin-bottom: 20px; /* Adds space below */
+}
+
+
+.colorful-text-1 {
+  color: #de7cd1;
+}
+
+.colorful-text-2 {
+  color: #1ba6ff;
+}
+
+.colorful-text-3 {
+  color: #16df53;
+}
+
+.colorful-text-4 {
+  color: #ff5757;
+}
+
+.colorful-text-5 {
+  color: #e8982c;
+}
+
+.normal-attack {
+  margin-top: 20px; /* Adds space above */
+  margin-bottom: 20px; /* Adds space below */
+  border-top: 2px solid #de7cd1; /* Adds a top inside border with the desired color */
+  padding-top: 10px; /* Adds space inside the border */
+}

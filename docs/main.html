@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilty Gear Giovanna</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Reference your custom script.js file -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="header-logo">
+                <a href="#" class="logo-header-button" title="Visit the main page">
+                    <img class="logo-icon" src="src/wiki_logo.png" alt="" aria-hidden="true" height="32" width="32">
+                </a>
+            </div>
+            <div class="header-search">
+                <a href="#" class="logo-header-button" title="Toggle search [/]">
+                    <img class="logo-icon" src="src/icons8-search.svg" alt="" aria-hidden="true" height="24" width="24">
+                </a>
+            </div>
+            <div class="header-dropdown">
+                <a href="#" class="logo-header-button" title="Toggle menu">
+                    <img class="logo-icon" src="src/icons8-menu.svg" alt="" aria-hidden="true" height="24" width="24">
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="main-header">
+                <div class="banner"></div>
+                <div class="header-content">
+                    <h1>GGST/Giovanna</h1>
+                </div>
+            </section>
+            <section class="content-and-sidebar">
+                <section class="content">
+                    <div class="overview">
+                      <div class="overview-title">
+                          <h2>Overview</h2>
+                      </div>
+                      <div class="home-card-container">
+                        <div class="home-grid-col3">
+                            <div class="home-link__button"><a href="#" class="button">Overview</a></div>
+                            <div class="home-link__button"><a href="#" class="button">Starter Guide</a></div>
+                            <div class="home-link__button"><a href="#" class="button">Combos</a></div>
+                        </div>
+                        <div class="home-grid-col3">
+                            <div class="home-link__button"><a href="#" class="button">Strategy</a></div>
+                            <div class="home-link__button"><a href="#" class="button">Matchups</a></div>
+                            <div class="home-link__button"><a href="#" class="button">Counterstrategy</a></div>
+                        </div>
+                        <div class="home-grid-col3">
+                            <div class="home-link__button"><a href="#" class="button">Okizeme</a></div>
+                            <div class="home-link__button"><a href="#" class="button">Frame Data</a></div>
+                            <div class="home-link__button"><a href="#" class="button">Resources</a></div>
+                        </div>
+                      </div>
+                      <div class="home-content-overview">
+                          <!-- Card 1 -->
+                          <div class="home-card home-card--col4 home-card--row1">
+                              <div class="home-card-title-large">Overview</div>
+                              <p>Move fast, strike fast, think fast! Giovanna is a rushdown character with outstanding speed and pressure, while also having a fair share of defensive capabilities. Her unique step dash preserves forward momentum if she acts during it, allowing her to advance and attack simultaneously; useful for closing the gap during an opening.</p>
+                              <br><p>Giovanna’s attack speed is top-class. Her 5P is unusually fast, and 5K is quite quick for its range. Her c.S is a powerful, plus on block pressure tool, and the multi-hitting nature of f.S and 2S make them easy to hit-confirm from. Pressure can be ended with the risk-free Sepultura, or reset with the plus on block but challengeable Trovão. Sol Poente is a risky overhead that can cross-up at close range, while Trovão can pierce through projectiles after a moderate startup. Sepultura's generous reach allows it to counter attempts to outmaneuver or low profile her pressure.</p>
+                              <br><p>Giovanna’s combination of speed, range, and evasion makes her defensive game solid despite her lack of a meterless reversal. Sol Nascente is a great anti-air that lacks the invulnerability of a traditional DP but compensates with evasive properties and high reward. Her 2D is a long, disjointed poke with great reward on counter hit. It’s good for space control, frame traps, and can be used as a meaty attack to outrange DPs or Reversal Overdrives.</p>
+                              <br><p>Giovanna’s unique Meter Boost magnifies her damage output and defense value when she has enough Tension, allowing her to benefit from Tension without spending it. Her pressure and neutral are simple yet versatile, and her combo routes have a wide variety of accessibility and adaptability.</p>
+                              <br><p>If you want an accessible character who is fast, aggressive, has strong counter hits and phenomenal fashion sense to boot, then Giovanna is for you.</p>
+                              <div style="clear:both"></div>
+                          </div>                    
+                          <!-- Card 2 (Side column) -->
+                          <div class="home-card home-card--col2 home-card--rowspan">
+                              <div class="home-card-title-large">Giovanna</div>
+                              <table class="infobox">
+                              <tbody>
+                                  <tr><td id="portrait-image" align="center">
+                                  <img src="src/giovanna_main.png" alt="Portrait" style="max-width: 100%;">
+                                  </td></tr>
+                                  <tr class="infobox-header"><td>Damage Received Mod</td></tr>
+                                  <tr class="infobox-data"><td>×1.03</td></tr>
+                                  <tr class="infobox-header"><td>Guts Rating</td></tr>
+                                  <tr class="infobox-data"><td>1</td></tr>
+                                  <tr class="infobox-header"><td>Prejump</td></tr>
+                                  <tr class="infobox-data"><td>4F</td></tr>
+                                  <tr class="infobox-header"><td>Backdash</td></tr>
+                                  <tr class="infobox-data"><td>19F Duration</td></tr>
+                                  <tr class="infobox-data"><td>1-5F Invuln</td></tr>
+                                  <tr class="infobox-data"><td>1-13F Airborne</td></tr><tr class="infobox-header"><td>Unique Movement Options</td></tr>
+                                  <tr class="infobox-data"><td>Variable step-dash</td></tr>
+                                  <tr class="infobox-header"><td>Fastest Attack</td></tr>
+                                  <tr class="infobox-data"><td><a href="#5P">5P</a> (4F)</td></tr>
+                                  <tr class="infobox-header"><td>Reversals</td></tr>
+                                  <tr class="infobox-data"><td><a href="#Ventania">632146H</a> (9F)</td></tr><style data-mw-deduplicate="TemplateStyles:r462282">.mw-parser-output .infobox{display:table;width:100%;text-align:left;line-height:1.25em}.mw-parser-output .infobox-header{width:100%;border-top:1px solid;border-color:var(--border-color-base);color:var(--color-base--emphasized);font-size:1em}.mw-parser-output .infobox-data td{text-align:right;font-size:0.875em}.mw-parser-output .infobox tr{display:flex;box-sizing:border-box;flex-direction:column;padding:0 10px}.mw-parser-output #portrait-image img{width:auto;height:auto;max-height:375px;max-width:calc(100% - 20px)}</style>
+                              </table>
+                              <div style="clear:both"></div>
+                          </div>                  
+                          <!-- Card 3 (Below Card 1) -->
+                          <div class="home-card home-card--col4 home-card--row2">
+                      <table id="reasons-table" style="margin: 0 auto;">
+                        <tbody style="gap: 10px;">
+                          <tr>
+                            <td colspan="2" class="ReasonsToPick-summary"><strong>Summary</strong>: Giovanna is a fast mid-range character with strong strike/throw offense.</td>
+                          </tr>
+                          <tr class="ReasonsToPick-header">
+                            <td><b>Pick if you like</b></td>
+                            <td><b>Avoid if you dislike</b></td>
+                          </tr>
+                          <tr>
+                            <td style="border-right: 1px solid #ccc; max-width: 300px; word-wrap: break-word;" valign="top">
+                              <ul>
+                                <li>Unmatched mobility with a lightning fast cancellable dash that grants loads of momentum to the actions she cancels it into.</li>
+                                <li>Guard crush okizeme and throw loops</li>
+                                <li>Strong mid-range neutral and space control with a footsies-heavy whiff-punish playstyle.</li>
+                                <li>Strong use of stagger pressure for enforcing a strike/throw gameplan.</li>
+                                <li>High damage and outstanding meter generation from many starters, with lots of flexibility for side swapping and okizeme.</li>
+                              </ul>
+                            </td>
+                            <td style="max-width: 300px; word-wrap: break-word;" valign="top">
+                              <ul>
+                                <li>Playing neutral without a projectile and relying on whiff punishing.</li>
+                                <li>An interactable strike/throw offensive gameplan without an untechable command grab.</li>
+                              </ul>
+                            </td>
+                          </tr>                              
+                        </tbody>
+                      </table>
+                      <div style="clear:both"></div>
+                          </div>
+                      </div>
+                      <div class="home-content-um">
+                          <div class="home-card home-card--col4 home-card--row1">
+                              <div class="home-card-title-large"> Unique Mechanic: Meter Boost</div>
+                              <p>
+                                When Giovanna's tension gauge is filled above certain thresholds, she deals more damage, receives less damage, and her normals begin dealing chip damage.
+                              </p>
+                              <ul>
+                                <li>She gains an approximate +5% damage at half Tension, which is raised to approximately +10% damage at full Tension. The buff will apply even if a move consumes Tension, meaning <a href="#Ventania">Ventania</a> and <a href="#Tempestade">Tempestade</a> deal more damage with each boost.</li>
+                                <li>Her <span class="tooltip" aria-expanded="false" tabindex="0">defense rating<span class="tooltiptext">A multiplier for how much damage you take. Lower = Better</span></span> improves from 1.03 to 0.97 at half Tension, and improves further to 0.93 at full Tension, similar to <b>Potemkin's</b> defense, the highest in the game.</li>
+                                <li>Every Normal attack begins dealing 12% chip at half Tension, which strengthens to 25% at full Tension, the standard chip damage for specials but on every single attack.</li>
+                              </ul>
+                              
+                              <ul class="gallery">
+                                <li class="gallerybox_">
+                                  <div class="thumb">
+                                    <a href="#HalfPower"><img src="src/175px-GGST_Giovanna_HalfPower.png" alt="Rei glows from 50% to 99% Tension"></a>
+                                  </div>
+                                  <div class="gallerytext">Rei glows from 50% to 99% Tension</div>
+                                </li>
+                                <li class="gallerybox_">
+                                  <div class="thumb">
+                                    <a href="#FullPower"><img src="src/170px-GGST_Giovanna_FullPower.png" alt="Giovanna glows at 100% Tension"></a>
+                                  </div>
+                                  <div class="gallerytext">Giovanna glows at 100% Tension</div>
+                                </li>
+                              </ul>
+                              <div style="clear:both;"></div>
+                          </div> 
+                      </div>
+                    </div>
+                    <div class="normal-attack">
+                      <h3 class="section-title">Normal Moves</h3>
+                      <!-- 5P -->
+                      <h3><span class="mw-headline" id="5P"><big><span class="colorful-text-1">5P</span></big></span></h3>
+                      <div class="attack-container">
+                        <!-- Gallery Section -->
+                        <div class="attack-gallery">
+                          <div class="tabber tabber--live">
+                            <!-- Tab Header -->
+                            <header class="tabber__header">
+                              <nav class="tabber__tabs" role="tablist">
+                                <a class="tabber__tab" href="#tabber-Images" id="tab-tabber-Images" role="tab" aria-selected="true" aria-controls="tabber-Images">Images</a>
+                                <a class="tabber__tab" href="#tabber-Hitboxes" id="tab-tabber-Hitboxes" role="tab" aria-selected="false" aria-controls="tabber-Hitboxes">Hitboxes</a>
+                              </nav>
+                            </header>
+                          
+                            <!-- Tab Content -->
+                            <section class="tabber__section">
+                              <!-- Images Tab -->
+                              <article class="tabber__panel" id="tabber-Images" role="tabpanel" aria-hidden="false">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/530px-GGST_Giovanna_5P.png" alt="Attack Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                          
+                              <!-- Hitboxes Tab -->
+                              <article class="tabber__panel" id="tabber-Hitboxes" role="tabpanel" aria-hidden="true">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/278px-GGST_Giovanna_5P_Hitbox.png" alt="Hitbox Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
+                          </div>
+                          
+                        </div>
+                      
+                        <!-- Frame Data Section -->
+                        <div class="attack-info">
+                          <table class="moveTable">
+                            <thead>
+                              <tr>
+                                <th>Damage</th>
+                                <th>Guard</th>
+                                <th>Startup</th>
+                                <th>Active</th>
+                                <th>Recovery</th>
+                                <th>On-Block</th>
+                                <th>Invuln</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>26</td>
+                                <td>All</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>9</td>
+                                <td>-2</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>                          
+                      
+                          <!-- Description Section -->
+                          <div class="attack-info-body">
+                            <p>A remarkably swift elbow jab. Faster than <span class="colorful-text-1">2P</span>, but hits higher up. Often as useful as a quick anti-air button as it is an abare button to get out of pressure. Throw punishable if you dash into throw range with only one hit of it, but chaining two jabs will keep you safe.</p>
+                            <ul>
+                              <li>4 frames of startup, so faster than average for a punch button</li>
+                              <li>The combo into <span class="colorful-text-2">214K</span> requires the opponent to be crouching, whereas <span class="colorful-text-3">623S</span> and <span class="colorful-text-1">6P</span> work on standing.</li>
+                            </ul>
+                            <p><a href="#" title="GGST/Giovanna/Frame Data">Gatling Options:</a> <span class="colorful-text-1">5P</span>, <span class="colorful-text-1">2P</span>, <span class="colorful-text-1">6P</span>, <span class="colorful-text-4">6H</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 5K -->
+                      <h3><span class="mw-headline" id="5P"><big><span class="colorful-text-2">5K</span></big></span></h3>
+                      <div class="attack-container">
+                        <!-- Gallery Section -->
+                        <div class="attack-gallery">
+                          <div class="tabber tabber--live">
+                            <!-- Tab Header -->
+                            <header class="tabber__header">
+                              <nav class="tabber__tabs" role="tablist">
+                                <a class="tabber__tab" href="#tabber-Images" id="tab-tabber-Images" role="tab" aria-selected="true" aria-controls="tabber-Images">Images</a>
+                                <a class="tabber__tab" href="#tabber-Hitboxes" id="tab-tabber-Hitboxes" role="tab" aria-selected="false" aria-controls="tabber-Hitboxes">Hitboxes</a>
+                              </nav>
+                            </header>
+                          
+                            <!-- Tab Content -->
+                            <section class="tabber__section">
+                              <!-- Images Tab -->
+                              <article class="tabber__panel" id="tabber-Images" role="tabpanel" aria-hidden="false">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/629px-GGST_Giovanna_5K.png" alt="Attack Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                          
+                              <!-- Hitboxes Tab -->
+                              <article class="tabber__panel" id="tabber-Hitboxes" role="tabpanel" aria-hidden="true">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/629px-GGST_Giovanna_5K_Hitbox.png" alt="Hitbox Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
+                          </div>
+                          
+                        </div>
+                      
+                        <!-- Frame Data Section -->
+                        <div class="attack-info">
+                          <table class="moveTable">
+                            <thead>
+                              <tr>
+                                <th>Damage</th>
+                                <th>Guard</th>
+                                <th>Startup</th>
+                                <th>Active</th>
+                                <th>Recovery</th>
+                                <th>On-Block</th>
+                                <th>Invuln</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>30</td>
+                                <td>All</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>12</td>
+                                <td>-2</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>                          
+                      
+                          <!-- Description Section -->
+                          <div class="attack-info-body">
+                            <p>A fantastic poke with considerable range for its speed. With dash momentum it can extend almost 1/4th screen. In particular, it's great to combine with microdashes and dash stops, as you can space yourself out to avoid going into throw range. At Roundstart, microdash <span class="colorful-text-2">5K</span> is one of the bedst roundstarts in the game. Low recovery means that whiffing this button is very low risk in general, and you can even catch people off guard with a frame kill of sorts by whiffing it right outside of range and then hitting <span class="colorful-text-4">5H</span> to counter-hit anyone sluggishly trying to punish your whiff.</p>
+                            <p>On block, Gio can frametrap with <span class="colorful-text-1">6P</span>, stagger pressure with <span class="colorful-text-3">c.S</span>, beat <span class="colorful-text-1">6P's</span> with <span class="colorful-text-5">2D</span> or <span class="colorful-text-2">214K</span>, or jump cancel for burst baiting, in combos, or for BRC mix.</p>
+                            <ul>
+                              <li>Jump and dash cancelable. Unlike a regular dash, the dash cancel prevents all input until the animation is finished.</li>
+                              <li>Dash cancel is -11 on block.</li>
+                              <li>Juggle tool that links into itself.</li>
+                              <li>True to the animation, about half of Giovanna's hurtbox is shifted upward throughout the attack, allowing you to potentially avoid lows from afar.</li>
+                            </ul>
+                            <p><a href="#" title="GGST/Giovanna/Frame Data">Gatling Options:</a> <span class="colorful-text-1">6P</span>, <span class="colorful-text-4">6H</span>, <span class="colorful-text-5">5D</span>, <span class="colorful-text-5">2D</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- c.S -->
+                      <h3><span class="mw-headline" id="5P"><big><span class="colorful-text-3">c.S</span></big></span></h3>
+                      <div class="attack-container">
+                        <!-- Gallery Section -->
+                        <div class="attack-gallery">
+                          <div class="tabber tabber--live">
+                            <!-- Tab Header -->
+                            <header class="tabber__header">
+                              <nav class="tabber__tabs" role="tablist">
+                                <a class="tabber__tab" href="#tabber-Images" id="tab-tabber-Images" role="tab" aria-selected="true" aria-controls="tabber-Images">Images</a>
+                                <a class="tabber__tab" href="#tabber-Hitboxes" id="tab-tabber-Hitboxes" role="tab" aria-selected="false" aria-controls="tabber-Hitboxes">Hitboxes</a>
+                              </nav>
+                            </header>
+                          
+                            <!-- Tab Content -->
+                            <section class="tabber__section">
+                              <!-- Images Tab -->
+                              <article class="tabber__panel" id="tabber-Images" role="tabpanel" aria-hidden="false">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/421px-GGST_Giovanna_cS.png" alt="Attack Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                          
+                              <!-- Hitboxes Tab -->
+                              <article class="tabber__panel" id="tabber-Hitboxes" role="tabpanel" aria-hidden="true">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/421px-GGST_Giovanna_cS_Hitbox.png" alt="Hitbox Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
+                          </div>
+                          
+                        </div>
+                      
+                        <!-- Frame Data Section -->
+                        <div class="attack-info">
+                          <table class="moveTable">
+                            <thead>
+                              <tr>
+                                <th>Damage</th>
+                                <th>Guard</th>
+                                <th>Startup</th>
+                                <th>Active</th>
+                                <th>Recovery</th>
+                                <th>On-Block</th>
+                                <th>Invuln</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>40</td>
+                                <td>All</td>
+                                <td>7</td>
+                                <td>6</td>
+                                <td>10</td>
+                                <td>+3</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>                          
+                      
+                          <!-- Description Section -->
+                          <div class="attack-info-body">
+                            <p>An invaluable knee strike that defines Giovanna's stagger and throw pressure. The +3 frame advantage allows you to chain this normal into itself with a small gap in between. letting you walk/dash up for a throw as you keep conditioning them to block, their only possible only non-reversal retaliation being a ~5 frame normal. Once they are conditioned to try and jump out of your throws, gatling into <span class="colorful-text-3">2S</span> to catch them trying to jump, throw tech, or mash. Gio must be very close to the opponent for <span class="colorful-text-3">c.S</span> to come out, with the less-powerful <span class="colorful-text-3">f.S</span> coming out if the opponent is too far away.</p>
+                            <p>Proper use of dash momentum is key to maximizing effectiveness. Even when using it as okizeme, while as close to the opponent as possible, dashing before you press the button will reduce pushback, since Gio will keep some of the dash's movement. When trying to loop pressure, remember to dash after the move recovers - dashing during active frames will lock you into the dash cancel animation and leaving you ~-7.</p>
+                            <p>The dash cancel on this button can lead to an immediate Blue Roman Cancel (BRC), which gives her an airtight high/low mixup on block with <span class="colorful-text-5">5D</span> or any of her lows. On hit both options lead to a conversion, and on block she remains plus enough to continue offense. The jump cancel can be done to do the same, mostly useful with an immediate drift forward BRC once you're in the air, as the hefty blockstun of <span class="colorful-text-3">c.S</span> is retained and you have ample time to mix the opponent up. You can force them into a standing block with any jump normal, and you also get access to double overhead mixups by chaining <span class="colorful-text-4">j.H</span> or <span class="colorful-text-2">j.K</span> into <span class="colorful-text-5">j.D</span> and then immediately going for a low upon landing.</p>
+                            <ul>
+                              <li>Causes a float state on hit, allowing you to start juggles off the ground by immediately going into <span class="colorful-text-4">2H</span>.</li>
+                              <li>Jump and dash cancelable. Unlike a regular dash, the dash cancel prevents all input until the animation is finished.</li>
+                              <li>Dash cancel is -4 on block.</li>
+                              <li>Whilst +3 on block and 7f startup, the closest gap you can have between this normal and itself is 5 frames wide due to the cancel window into <span class="colorful-text-3">f.S</span></li>
+                            </ul>
+                            <p><a href="#" title="GGST/Giovanna/Frame Data">Gatling Options:</a> <span class="colorful-text-1">6P</span>, <span class="colorful-text-3">f.S</span>, <span class="colorful-text-3">2.S</span>, <span class="colorful-text-4">5H</span>, <span class="colorful-text-4">2H</span>, <span class="colorful-text-4">6H</span>, <span class="colorful-text-5">5D</span>, <span class="colorful-text-5">2D</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- f.S -->
+                      <h3><span class="mw-headline" id="5P"><big><span class="colorful-text-3">f.S</span></big></span></h3>
+                      <div class="attack-container">
+                        <!-- Gallery Section -->
+                        <div class="attack-gallery">
+                          <div class="tabber tabber--live">
+                            <!-- Tab Header -->
+                            <header class="tabber__header">
+                              <nav class="tabber__tabs" role="tablist">
+                                <a class="tabber__tab" href="#tabber-Images" id="tab-tabber-Images" role="tab" aria-selected="true" aria-controls="tabber-Images">Images</a>
+                                <a class="tabber__tab" href="#tabber-Hitboxes" id="tab-tabber-Hitboxes" role="tab" aria-selected="false" aria-controls="tabber-Hitboxes">Hitboxes</a>
+                              </nav>
+                            </header>
+                          
+                            <!-- Tab Content -->
+                            <section class="tabber__section">
+                              <!-- Images Tab -->
+                              <article class="tabber__panel" id="tabber-Images" role="tabpanel" aria-hidden="false">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/GGST_Giovanna_fS1.png" alt="Attack Image">
+                                    </div>
+                                    <div class="thumb">
+                                      <img src="src/800px-GGST_Giovanna_fS2.png" alt="Attack Image">
+                                    </div>
+                                    <div class="thumb">
+                                      <img src="src/GGST_Giovanna_fS3.png" alt="Attack Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                          
+                              <!-- Hitboxes Tab -->
+                              <article class="tabber__panel" id="tabber-Hitboxes" role="tabpanel" aria-hidden="true">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/800px-GGST_Giovanna_fS1_hitbox.png" alt="Hitbox Image">
+                                    </div>
+                                    <div class="thumb">
+                                      <img src="src/800px-GGST_Giovanna_fS2_hitbox.png" alt="Hitbox Image">
+                                    </div>
+                                    <div class="thumb">
+                                      <img src="src/800px-GGST_Giovanna_fS3_hitbox.png" alt="Hitbox Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
+                          </div>
+                          
+                        </div>
+                      
+                        <!-- Frame Data Section -->
+                        <div class="attack-info">
+                          <table class="moveTable">
+                            <thead>
+                              <tr>
+                                <th>Damage</th>
+                                <th>Guard</th>
+                                <th>Startup</th>
+                                <th>Active</th>
+                                <th>Recovery</th>
+                                <th>On-Block</th>
+                                <th>Invuln</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>10, 10, 16</td>
+                                <td>All</td>
+                                <td>9</td>
+                                <td>2(6)2(6)2</td>
+                                <td>16</td>
+                                <td>-4</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>                          
+                      
+                          <!-- Description Section -->
+                          <div class="attack-info-body">
+                            <p>Three consecutive kicks, good for catching backdash, low-to-the-ground airborne opponents and putting out alot of hitboxes in neutral.With momentum <span class="colorful-text-3">f.S</span> will continue sliding as each hit comes out, making it good for approaching opponents. It has some weaknesses - it loses to <span class="colorful-text-1">6P's</span> and low profiles, and is very punishable on whiff. Along with <span class="colorful-text-3">2S</span>, it lets Giovanna easily hit confirm into a basic combo. On block, Gio can threaten a <span class="colorful-text-4">5H</span> frametrap.</p>
+                            <ul>
+                              <li>Hits 3 times, with each hit slightly increasing in vertical height.</li>
+                              <li>Can be low profiled.</li>
+                              <li>Long active duration.</li>
+                            </ul>
+                            <p><a href="#" title="GGST/Giovanna/Frame Data">Gatling Options:</a> <span class="colorful-text-4">5H</span>, <span class="colorful-text-4">2H</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 5H -->
+                      <h3><span class="mw-headline" id="5P"><big><span class="colorful-text-4">5H</span></big></span></h3>
+                      <div class="attack-container">
+                        <!-- Gallery Section -->
+                        <div class="attack-gallery">
+                          <div class="tabber tabber--live">
+                            <!-- Tab Header -->
+                            <header class="tabber__header">
+                              <nav class="tabber__tabs" role="tablist">
+                                <a class="tabber__tab" href="#tabber-Images" id="tab-tabber-Images" role="tab" aria-selected="true" aria-controls="tabber-Images">Images</a>
+                                <a class="tabber__tab" href="#tabber-Hitboxes" id="tab-tabber-Hitboxes" role="tab" aria-selected="false" aria-controls="tabber-Hitboxes">Hitboxes</a>
+                              </nav>
+                            </header>
+                          
+                            <!-- Tab Content -->
+                            <section class="tabber__section">
+                              <!-- Images Tab -->
+                              <article class="tabber__panel" id="tabber-Images" role="tabpanel" aria-hidden="false">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/683px-GGST_Giovanna_5H.png" alt="Attack Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                          
+                              <!-- Hitboxes Tab -->
+                              <article class="tabber__panel" id="tabber-Hitboxes" role="tabpanel" aria-hidden="true">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/683px-GGST_Giovanna_5H_Hitbox.png" alt="Hitbox Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
+                          </div>
+                          
+                        </div>
+                      
+                        <!-- Frame Data Section -->
+                        <div class="attack-info">
+                          <table class="moveTable">
+                            <thead>
+                              <tr>
+                                <th>Damage</th>
+                                <th>Guard</th>
+                                <th>Startup</th>
+                                <th>Active</th>
+                                <th>Recovery</th>
+                                <th>On-Block</th>
+                                <th>Invuln</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>45</td>
+                                <td>All</td>
+                                <td>10</td>
+                                <td>3</td>
+                                <td>19</td>
+                                <td>-5</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>                          
+                      
+                          <!-- Description Section -->
+                          <div class="attack-info-body">
+                            <p>A long kick that Giovanna has good gatlings into from <span class="colorful-text-3">S</span> buttons, making it invaluable in pressure and frametraps. It's also Giovanna's longest ground poke, useful when you're forced to stay at a distance. While it may not be the fastest or most plus of her normals, this button opens up many options that she would otherwise struggle with, and is a core part of cementing her poke/punish/pressure playstyle as well as her grounded routes that she's too far to get a launcher out of.</p>
+                            <ul>
+                              <li>Combos into <span class="colorful-text-2">236K</span> and <span class="colorful-text-3">en623S</span> on counter-hit for decent damage.</li>
+                              <li>Partially disjointed</li>
+                              <li>Wallbounces and groundbounces on air hit</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 5D -->
+                      <h3><span class="mw-headline" id="5P"><big><span class="colorful-text-5">5D</span></big></span></h3>
+                      <div class="attack-container">
+                        <!-- Gallery Section -->
+                        <div class="attack-gallery">
+                          <div class="tabber tabber--live">
+                            <!-- Tab Header -->
+                            <header class="tabber__header">
+                              <nav class="tabber__tabs" role="tablist">
+                                <a class="tabber__tab" href="#tabber-Images" id="tab-tabber-Images" role="tab" aria-selected="true" aria-controls="tabber-Images">Images</a>
+                                <a class="tabber__tab" href="#tabber-Hitboxes" id="tab-tabber-Hitboxes" role="tab" aria-selected="false" aria-controls="tabber-Hitboxes">Hitboxes</a>
+                              </nav>
+                            </header>
+                          
+                            <!-- Tab Content -->
+                            <section class="tabber__section">
+                              <!-- Images Tab -->
+                              <article class="tabber__panel" id="tabber-Images" role="tabpanel" aria-hidden="false">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/509px-GGST_Giovanna_5D.png" alt="Attack Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                          
+                              <!-- Hitboxes Tab -->
+                              <article class="tabber__panel" id="tabber-Hitboxes" role="tabpanel" aria-hidden="true">
+                                <ul class="gallery">
+                                  <li class="gallerybox">
+                                    <div class="thumb">
+                                      <img src="src/509px-GGST_Giovanna_5D_Hitbox.png" alt="Hitbox Image">
+                                    </div>
+                                  </li>
+                                </ul>
+                              </article>
+                            </section>
+                          </div>
+                          
+                        </div>
+                      
+                        <!-- Frame Data Section -->
+                        <div class="attack-info">
+                          <table class="moveTable">
+                            <thead>
+                              <tr>
+                                <th>Version</th>
+                                <th>Damage</th>
+                                <th>Guard</th>
+                                <th>Startup</th>
+                                <th>Active</th>
+                                <th>Recovery</th>
+                                <th>On-Block</th>
+                                <th>Invuln</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>5D</td>
+                                <td>45</td>
+                                <td>High</td>
+                                <td>20</td>
+                                <td>4</td>
+                                <td>25</td>
+                                <td>-15</td>
+                                <td></td>
+                              </tr>
+                              <tr class="row_down_tr">
+                                <td>5[D]</td>
+                                <td>56</td>
+                                <td>High</td>
+                                <td>28</td>
+                                <td>4</td>
+                                <td>25</td>
+                                <td>-10</td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>                          
+                      
+                          <!-- Description Section -->
+                          <div class="attack-info-body">
+                            <p><b>Uncharged Dust</b></p>
+                            <p>Universal overhead attack that's pretty fast. Giovanna steps forward and does a split kick. It doesn't really look like an overhead, but it certainly hits like one. Given Giovanna's pressure, it shouldn't be too hard to crank the RISC gauge and cash out damage with <span class="colorful-text-5">5D</span>. Can be gatling from <span class="colorful-text-2">5K</span>, <span class="colorful-text-2">2K</span>, or <span class="colorful-text-3">c.S</span> for a mixup.</p>
+                            <ul>   
+                              <li>Uncharged dust on-hit is 0 or neutral frame advantage and causes float</li>
+                              <li>Causes 80% proration on-hit</li>
+                            </ul>
+                            <div class="divisor"></div>
+                            <p><b>Charged Dust</b></p>
+                            <p>Similar to uncharged but is slow enough to be reacted to, but if it does land it gives a very high damaging combo. Gio's highest damage singular attack, use this if you want to break walls when you have enough time to charge it and you don't have meter.</p>
+                            <ul>   
+                              <li>Charged dust leads to soft knockdown (+36).</li>
+                              <li>Holding up during the hitstop frames of charged dust will activate homing jump:
+                                <ul class="anid_list">
+                                  <li>Doing a homing jump will cause an area shift and put the opponent into a unique high damaging air combo state.</li>
+                                  <li>Pressing any attack twice without jump/dash cancel will activate the homing jump finisher causing a hard knockdown (+23).</li>
+                                  <li>Homing jump combos can sometimes increase meter balance enough to activate positive bonus.</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </section>
+                <div class="sidebar">
+                    <ul class="sidebar-links">
+                      <li><a href="#introduction">Overview</a></li>
+                      <li><a href="#moves">Moves</a>
+                        <ul class="sidebar-links-level2">
+                          <li><a href="#normals">Normal Attacks</a></li>
+                          <li><a href="#specials">Special Attacks</a></li>
+                          <li><a href="#supers">Super Moves</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#strategy">Strategy</a>
+                        <ul class="sidebar-links-level2">
+                          <li><a href="#offense">Offensive Strategy</a></li>
+                          <li><a href="#defense">Defensive Strategy</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#matchups">Matchups</a></li>
+                      <li><a href="#combos">Combos</a></li>
+                    </ul>
+                  </div>                 
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-container">
+                <section class="footer-content">
+                    <div id="wordmark">
+                        Guilty Gear Strive
+                    </div>
+                    <p id="footer-description">
+                        Guilty Gear Strive is a game developed by Arc System Works.<br>
+                        This page focus on rely competitive elements of these games and provides instructional 
+                        conten.
+                    </p>
+                </section>
+                <section class="footer-bottom">
+                    <div id="footer-tagline">Academic Exercise by William Alejandro Pabon</div>
+                </section>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
